@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Rajdhani-Medium";
+    src: url("../fonts/Rajdhani-Bold.ttf") format("truetype");
+}
+
+h1 {
+    color: green;
+    font-family: "Rajdhani-Medium"
+}
