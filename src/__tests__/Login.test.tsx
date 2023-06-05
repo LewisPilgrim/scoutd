@@ -12,16 +12,21 @@ function setup(jsx: any) {
 }
 
 describe("Login", () => {
-    it("should fire submit function on button press", async () => {
+    test("should fire submit function on button press", async () => {
         const handleSubmit = jest.fn()
         const { user } = setup(<Login onSubmit={handleSubmit} />)
         await user.click(screen.getByRole("button", {name: "Submit"}))
         expect(handleSubmit).toHaveBeenCalled()
+    }),
+    test("renders Login", () => {
+        render(<Login />)
+        const textElement = screen.getByText("Login")
+        expect(textElement).toBeInTheDocument()
+    }),
+    test("should contain link to Register page and Forgot Password page", () => {
+        render(<Login />)
+        expect(screen.getByText("Register")).toBeInTheDocument()
+        expect(screen.getByText("Forgot password?")).toBeInTheDocument()
     })
 })
 
-test("renders Login", () => {
-    render(<Login />)
-    const textElement = screen.getByText("Login")
-    expect(textElement).toBeInTheDocument()
-})

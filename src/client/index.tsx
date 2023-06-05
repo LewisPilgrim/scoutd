@@ -3,6 +3,9 @@ import {createRoot} from "react-dom/client"
 import App from "./App"
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Login from "./components/Login/Login";
+import Register from "./components/Register/Register";
+import ForgotPassword from "./components/Login/ForgotPassword";
+import BadRoute from "./components/BadRoute";
 
 const router = createBrowserRouter([
     {
@@ -13,6 +16,18 @@ const router = createBrowserRouter([
         path: "/login",
         element: <Login />,
     },
+    {
+        path: "/register",
+        element: <Register />,
+    },
+    {
+        path: "/forgot",
+        element: <ForgotPassword />,
+    },
+    {
+        path: "*",
+        element: <BadRoute />,
+    }
 ]);
 
 const rootEl = document.querySelector("#root")

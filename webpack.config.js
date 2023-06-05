@@ -9,6 +9,7 @@ module.exports = [
         output: {
             path: path.resolve(__dirname, "dist/client"),
             filename: "client_bundle.js",
+            publicPath: '/'
         },
         plugins: [
             new HtmlWebpackPlugin({
@@ -45,6 +46,9 @@ module.exports = [
                     type: "asset/resource",
                 }
             ]
+        },
+        devServer: {
+            historyApiFallback: true
         }
     }
 ]
