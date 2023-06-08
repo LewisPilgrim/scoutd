@@ -7,9 +7,9 @@ const BadRoute = () => {
     
   if (isRouteErrorResponse(error)) {
     if (error.status === 401) {
-
+        return <h1>Error 401</h1>
     } else if (error.status === 404) {
-
+        return <h1>Error 404</h1>
     }
 
     return (
