@@ -2,9 +2,9 @@ import React from "react"
 import {createRoot} from "react-dom/client"
 import App from "./App"
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Login from "./components/Login/Login";
-import Register from "./components/Register/Register";
-import ForgotPassword from "./components/Login/ForgotPassword";
+import Login from "./components/auth/Login/Login";
+import Register from "./components/auth/Register/Register";
+import ForgotPassword from "./components/auth/Login/ForgotPassword";
 import BadRoute from "./components/BadRoute";
 
 const router = createBrowserRouter([
